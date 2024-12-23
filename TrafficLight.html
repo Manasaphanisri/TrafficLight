@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="first text-center">
+        <h1>Traffic Light</h1>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="d-flex flex-column">
+
+                <button id="stopButton" class="one m-2" onclick="one()">Stop</button>
+                <button id="readyButton" class="one m-2" onclick="two()">Ready</button>
+                <button id="goButton" class="one m-2" onclick="three()">Go</button>
+            </div>
+            <div class="d-flex flex-column two">
+                <div id="stopLight" class="three"></div>
+                <div id="readyLight" class="four"></div>
+                <div id="goLight" class="five"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+    .one {
+        height: 10vh;
+        width: 20vw;
+        border-radius: 6px;
+        background-color: #1f1d41;
+        color: #fff;
+        border-width: 0px;
+    }
+
+    .two {
+        height: 40vh;
+        width: 13vw;
+        background-color: #1f1d41;
+        border-radius: 23px;
+        margin-left: 10px;
+    }
+
+    .three {
+        height: 7vh;
+        width: 8vw;
+        border-radius: 500px;
+        background-color: #4b5069;
+        margin-top: 20px;
+        margin-left: 12px;
+    }
+
+    .four {
+        height: 7vh;
+        width: 8vw;
+        border-radius: 500px;
+        background-color: #4b5069;
+        margin-top: 25px;
+        margin-left: 12px;
+    }
+
+    .five {
+        height: 7vh;
+        width: 8vw;
+        border-radius: 500px;
+        background-color: #4b5069;
+        margin-top: 25px;
+        margin-left: 12px;
+    }
+
+    .first {
+        height: 70vh;
+        width: 100vw;
+        background-color: #86d2f2;
+    }
+</style>
+
+<script>
+    function one() {
+        document.getElementById("stopButton").style.backgroundColor = "#cf1124";
+        document.getElementById("stopLight").style.backgroundColor = "#cf1124";
+        document.getElementById("readyButton").style.backgroundColor = "#4b5069";
+        document.getElementById("readyLight").style.backgroundColor = "#4b5069";
+        document.getElementById("goButton").style.backgroundColor = "#4b5069";
+        document.getElementById("goLight").style.backgroundColor = "#4b5069";
+    }
+
+    function two() {
+        document.getElementById("readyButton").style.backgroundColor = "#f7c948";
+        document.getElementById("readyLight").style.backgroundColor = "#f7c948";
+        document.getElementById("stopButton").style.backgroundColor = "#4b5069";
+        document.getElementById("stopLight").style.backgroundColor = "#4b5069";
+        document.getElementById("goButton").style.backgroundColor = "#4b5069";
+        document.getElementById("goLight").style.backgroundColor = "#4b5069";
+    }
+
+    function three() {
+        document.getElementById("stopButton").style.backgroundColor = "#4b5069";
+        document.getElementById("stopLight").style.backgroundColor = "#4b5069";
+        document.getElementById("goButton").style.backgroundColor = "#199473";
+        document.getElementById("goLight").style.backgroundColor = "#199473";
+        document.getElementById("readyButton").style.backgroundColor = "#4b5069";
+        document.getElementById("readyLight").style.backgroundColor = "#4b5069";
+    }
+</script>
